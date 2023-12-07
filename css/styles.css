@@ -1,0 +1,38 @@
+body{
+	width:800px;
+	margin:0 auto;
+}
+#header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#titulo{
+	text-align: center;
+}
+#playground{
+	display: flex;
+	flex-direction: row;
+}
+div.dice{
+	float:left;
+	width:32px;
+	background:#F5F5F5;
+	border:#999 1px solid;
+	padding:10px;
+	font-size:24px;
+	text-align:center;
+	margin:5px;
+}
+#tCanvas{
+	border:dotted 2px yellow;
+	background:green;	
+}
+#marcador{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+h1{
+	text-align:center;
+}
