@@ -1,3 +1,4 @@
+
 var TODAS = COLUMNAS * RENGLONES;
 var MINAS = COLUMNAS * 2;
 var VECINOS = 8;
@@ -74,7 +75,7 @@ function rollDice2(){
 INICIO
 ************/
 window.onload = function(){
-	canvas = document.getElementById("tCanvas");
+	canvas = document.getElementById("#tCanvas");
 	if(canvas && canvas.getContext){
 		ctx = canvas.getContext("2d");
 		if(ctx){

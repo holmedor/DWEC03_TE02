@@ -1,18 +1,45 @@
 body{
-	width:800px;
-	margin:0 auto;
+    margin: 0 auto;
+    width: 800px;
+	height: 700px;
 }
 #header{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	background-color: #BECDB6;
+	min-height: 100px;
+	align-content: center;
+	border:dotted 2px black;
 }
 #titulo{
 	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	color: black;
+}
+#chat{
+	text-align: center;
+	color: red;
 }
 #playground{
+	width: 100%;
+	height: 100%;
+	display: inline-flex;
+	justify-content: center;
+	background-color: whitesmoke;
+	border:dotted 2px black;
+}
+#playground #formNombre{
+	align-self: center;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	align-items: stretch;
+}
+#playground #tCanvas{
+	align-self: center;
+	border:dotted 2px yellow;
+	background:whitesmoke;	
 }
 div.dice{
 	float:left;
@@ -24,15 +51,21 @@ div.dice{
 	text-align:center;
 	margin:5px;
 }
-#tCanvas{
-	border:dotted 2px yellow;
-	background:green;	
+#coche1{
+	display:flex;
+	flex-direction: column;
+	align-content: left;
+	background-color: #5B7721;
+}
+#coche2{
+	display:flex;
+	flex-direction: column;
+	align-content: right;
+	background-color: #91CD72;
 }
 #marcador{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
-h1{
-	text-align:center;
-}
+

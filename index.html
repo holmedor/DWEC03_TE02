@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CARRERA RANDOM: INICIO" />
     <meta name="keywords" content="HTML5, CSS3, JavaScript" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/scripts.js">  </script>
+    <script src="js/scripts01.js"></script>
     <title>CARRERA RANDOM: INICIO</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header">
-        <div id="titulo">RANDOM RACE</div>
-        <div id="chat">ESTE ES EL CHAT</div>
+      <div id="titulo">RANDOM RACE</div>
+      <div id="chat">ESTE ES EL CHAT</div>
     </div>
     <div id="playground">
-    <div id="coche1">        
-        <div id="die1" class="dice">1</div>
-        <button onclick="rollDice1()">Tira el Dado 1</button>
-        <h2 id="status1" style="clear:left;"></h2>
-        <h2 id="tiro1" style="clear:left;"></h2>
+      <form id="formNombre">
+        <fieldset>
+          <label for="fnombre">Usuario</label>
+          <input type="text" id="fnombre" name="Usuario" /><br /><br />
+          <label for="fpassword">Password</label>
+          <input type="password" id="fpassword" name="Password" /><br /><br />
+          <input
+            type="button"
+            id="butAniadirJugador"
+            value="ENTRAR"
+            onclick="inicio()"
+          />
+        </fieldset>
+      </form>
     </div>
-    <canvas id="tCanvas" width="600px" height="460px">
-            Tu navegador no soporta CANVAS
-    </canvas>
-    <div id="coche2">
-        <div id="die2" class="dice">2</div>
-        <button onclick="rollDice2()">Tira el Dado 2</button>
-        <h2 id="status2" style="clear:left;"></h2>
-        <h2 id="tiro2" style="clear:left;"></h2>
-    </div>
-    </div>
-</body>
+  </body>
 </html>
-
