@@ -17,8 +17,7 @@ var nombre = "";
 var password = "";
 var id = "";
 var passwordOK = false;
-
-const myTimeout = 9000;
+var url = "randomrace.html";
 
 // -------------------- CLASE JUGADOR -------------------------------
 class Jugador {
@@ -104,24 +103,17 @@ function crearID() {
 }
 
 function inicio() {
-  //		do{
   capturarDatosJugador();
   passwordOK = false;
   //comprobar password sin caracteres especiales
   comprobarPassword(password);
-  //		} while (passwordOK==false);
-  //	console.log("La password no tiene caracteres especiales!!!");
   // comprobar usuario y password en json
   console.log("usuario: " + nombre);
   console.log("password: " + password);
-
-  // crear el jugador y añadirlo al array
-  //	   crearJugador(nombre,password,id)
   if (passwordOK == true) {
     if (buscarJugador(nombre, password) == true) {
       document.getElementById("chat").innerHTML =
         "Nombre de usuario y password correctos!!!";
-      var url = "randomrace.html";
 	  alert("Bienvenido al juego randomrace!!!")
       redirigir(url);
     } else {
@@ -131,19 +123,6 @@ function inicio() {
   }
 }
 
-function redirigir(url) {
-  window.location.href = url;
-}
-
-function buscarJugador(nombre, password) {
-  let encontrado = false;
-  arrayJugadores.forEach(function (jugador) {
-    if (jugador.nombre == nombre && jugador.password == password) {
-      encontrado = true;
-    }
-  });
-  return encontrado;
-}
 function capturarDatosJugador() {
   // TODO: recoger los el nombre y password del HTML
   nombre = document.getElementById("fnombre").value;
@@ -191,10 +170,21 @@ function comprobarPassword(password) {
   }
 }
 
+function buscarJugador(nombre, password) {
+  let encontrado = false;
+  arrayJugadores.forEach(function (jugador) {
+    if (jugador.nombre == nombre && jugador.password == password) {
+      encontrado = true;
+    }
+  });
+  return encontrado;
+}
+
+function redirigir(url) {
+  window.location.href = url;
+}
 // ------------------- MAIN ------------------------
-
-// TODO: añadimos los jugadores iniciales cuando empieza el programa
-
+// cargamos los jugadores cuando empieza el programa
 cargarJugadoresJSON(); //carga el fichero JSON
 console.log("Jugadores cargados!!!");
 console.log(arrayJugadores);
