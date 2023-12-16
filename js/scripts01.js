@@ -22,14 +22,16 @@ var url = "randomrace.html";
 // -------------------- CLASE JUGADOR -------------------------------
 class Jugador {
   //constructor
-  constructor(nombre, password, id) {
-    this.nombre = nombre;
-    this.password = password;
+  constructor(id, nombre, apellido, usuario, contraseña) {
     this.id = id;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.usuario = usuario;
+    this.contraseña = contraseña;
   }
   // metodos
   getJugador() {
-    return this.id + " " + this.nombre + " " + this.password;
+    return this.id + " " + this.nombre + " " + this.apellido + " " + this.usuario + " " + this.contraseña;
   }
   getIdJugador() {
     return this.id;
@@ -37,16 +39,23 @@ class Jugador {
   getNombreJugador() {
     return this.nombre;
   }
-  getPasswordJugador() {
-    return this.password;
+  getApellidoJugador() {
+    return this.apellido;
   }
+  getUsuarioJugador() {
+    return this.usuario;
+  }
+  getContraseñaJugador() {
+    return this.contraseña;
+  }
+
 }
 
 /*
   funcion para leer del JSON
 */
 function cargarJugadoresJSON() {
-  let path = "data/datosJugadores.json";
+  let path = "data/usuarios.json";
 
   let request = new Request(path, {
     headers: new Headers({
@@ -69,37 +78,21 @@ function cargarJugadoresJSON() {
 function aniadirJugadoresInicialesArray(data) {
   //  cargar el fichero JSON, parsearlo a objetos tipo "jugador" y añadirlos al array
   var myJSON = JSON.stringify(data);
+  console.log("myJSON: ",myJSON);
   var objetoParseado = JSON.parse(myJSON);
-  for (let i = 0; i < objetoParseado.jugador.length; i++) {
+  console.log("objetoParseado: ",objetoParseado);
+  for (let i = 0; i < objetoParseado.length; i++) {
     var nuevoJugador = new Jugador(
-      objetoParseado.jugador[i].nombre,
-      objetoParseado.jugador[i].password,
-      objetoParseado.jugador[i].id
+      objetoParseado[i].id,
+      objetoParseado[i].nombre,
+      objetoParseado[i].apellido,
+      objetoParseado[i].usuario,
+      objetoParseado[i].contraseña,
     );
     // añadir el objeto al array
     arrayJugadores.push(nuevoJugador);
   }
   console.log("arrayJugadores: ", arrayJugadores);
-}
-/* 
-    Metodo para crear un jugador pasandole el nombre y la password y añadirlo al array
- */
-function crearJugador(nombre, password, id) {
-  // crear objeto Jugador
-  var nuevoJugador = new Jugador(nombre, password, id);
-  // añadir el objeto al array
-  arrayJugadores.push(nuevoJugador);
-  console.log("arrayJugadores: ", arrayJugadores);
-}
-
-/*
-	Metodo para crear el ID del jugador en funcion del ultimo
-	ID que hay en el array de Jugadores
-*/
-function crearID() {
-  // mirar el id del ultimo jugador del array y sumarle uno
-  console.log(arrayJugadores[arrayJugadores.length - 1].id);
-  return arrayJugadores[arrayJugadores.length - 1].id + 1;
 }
 
 function inicio() {
@@ -127,13 +120,8 @@ function capturarDatosJugador() {
   // TODO: recoger los el nombre y password del HTML
   nombre = document.getElementById("fnombre").value;
   password = document.getElementById("fpassword").value;
-  id = crearID();
-  //PARA MOSTRARLOS (QUITAR)
-  //    document.getElementById("escribir").innerHTML=" \ Tu nombre es: "+nombre+" \
-  //     <br>Tu password es: "+password+"<br>Tu id es: "+id;
   console.log("Nombre:" + nombre);
   console.log("Password:" + password);
-  console.log("Id:" + id);
 }
 
 function comprobarPassword(password) {
@@ -173,7 +161,7 @@ function comprobarPassword(password) {
 function buscarJugador(nombre, password) {
   let encontrado = false;
   arrayJugadores.forEach(function (jugador) {
-    if (jugador.nombre == nombre && jugador.password == password) {
+    if (jugador.usuario == nombre && jugador.contraseña == password) {
       encontrado = true;
     }
   });

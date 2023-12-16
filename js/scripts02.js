@@ -85,11 +85,31 @@ class Celda {
 		this.h = h;
 		this.i = i;
 		this.dibuja = dibujaCelda;
+		this.circuito1 = marcaCelda1;
+		this.circuito2 = marcaCelda2;
 	}
 }
 function dibujaCelda(){
 	ctx.save();
 	ctx.fillStyle = colorTecla;
+	ctx.strokeStyle = colorMargen;
+	ctx.fillRect(this.x, this.y, this.w, this.h);
+	ctx.strokeRect(this.x, this.y, this.w, this.h);
+	ctx.restore();
+}
+
+function marcaCelda1(){
+	ctx.save();
+	ctx.fillStyle = colorCoche1;
+	ctx.strokeStyle = colorMargen;
+	ctx.fillRect(this.x, this.y, this.w, this.h);
+	ctx.strokeRect(this.x, this.y, this.w, this.h);
+	ctx.restore();
+}
+
+function marcaCelda2(){
+	ctx.save();
+	ctx.fillStyle = colorCoche2;
 	ctx.strokeStyle = colorMargen;
 	ctx.fillRect(this.x, this.y, this.w, this.h);
 	ctx.strokeRect(this.x, this.y, this.w, this.h);
