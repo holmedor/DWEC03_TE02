@@ -1,35 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CARRERA RANDOM: INICIO" />
-    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/scripts02.js"></script>
-    <title>CARRERA RANDOM: INICIO</title>
-  </head>
-  <body>
-    <div id="header">
-      <div id="titulo">RANDOM RACE</div>
-      <div id="chat">DIBUJA EL CIRCUITO</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CARRERA RANDOM: INICIO" />
+  <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>CARRERA RANDOM: INICIO</title>
+</head>
+
+<body>
+  <div id="header">
+    <div id="titulo">RANDOM RACE</div>
+    <div id="chat">DIBUJA EL CIRCUITO</div>
+  </div>
+  <div id="playground">
+    <div id="coche1">
+      <div id="die1" class="dice">1</div>
+      <button onclick="rollDice1()">Tira el Dado 1</button>
+      <h2 id="status1" style="clear: left"></h2>
+      <h2 id="tiro1" style="clear: left"></h2>
     </div>
-    <div id="playground">
-        <div id="coche1">
-            <div id="die1" class="dice">1</div>
-            <button onclick="rollDice1()">Tira el Dado 1</button>
-            <h2 id="status1" style="clear: left"></h2>
-            <h2 id="tiro1" style="clear: left"></h2>
-          </div>
-          <canvas id="tCanvas" width="600px" height="460px">
-            Tu navegador no soporta CANVAS
-          </canvas>
-          <div id="coche2">
-            <div id="die2" class="dice">2</div>
-            <button onclick="rollDice2()">Tira el Dado 2</button>
-            <h2 id="status2" style="clear: left"></h2>
-            <h2 id="tiro2" style="clear: left"></h2>
-          </div>
+    <!--    <canvas id="tCanvas" width="600px" height="460px">
+      Tu navegador no soporta CANVAS
+    </canvas>
+    -->
+    <div id="tablero">
+      <div id="fila01">
+      <div id="celda01-01"></div>
+      <div id="celda01-02"></div>
+      <div id="celda01-03"></div>
+      <div id="celda01-04"></div>
+      <div id="celda01-05"></div>
+      <div id="celda01-06"></div>
+      <div id="celda01-07"></div>
+      <div id="celda01-08"></div>
+      <div id="celda01-09"></div>
+      <div id="celda01-10"></div>
+      <div id="celda01-11"></div>
+      <div id="celda01-12"></div>
     </div>
-  </body>
+    <div id="fila02">
+      <div id="celda02-01"></div>
+      <div id="celda02-02"></div>
+      <div id="celda02-03"></div>
+      <div id="celda02-04"></div>
+      <div id="celda02-05"></div>
+      <div id="celda02-06"></div>
+      <div id="celda02-07"></div>
+      <div id="celda02-08"></div>
+      <div id="celda02-09"></div>
+      <div id="celda02-10"></div>
+      <div id="celda02-11"></div>
+      <div id="celda02-12"></div>
+    </div>
+    <div id="fila03">
+      <div id="celda03-01"></div>
+      <div id="celda03-02"></div>
+      <div id="celda03-03"></div>
+      <div id="celda03-04"></div>
+      <div id="celda03-05"></div>
+      <div id="celda03-06"></div>
+      <div id="celda03-07"></div>
+      <div id="celda03-08"></div>
+      <div id="celda03-09"></div>
+      <div id="celda03-10"></div>
+      <div id="celda03-11"></div>
+      <div id="celda03-12"></div>
+    </div>
+    <div id="fila04">
+      <div id="celda04-01"></div>
+      <div id="celda04-02"></div>
+      <div id="celda04-03"></div>
+      <div id="celda04-04"></div>
+      <div id="celda04-05"></div>
+      <div id="celda04-06"></div>
+      <div id="celda04-07"></div>
+      <div id="celda04-08"></div>
+      <div id="celda04-09"></div>
+      <div id="celda04-10"></div>
+      <div id="celda04-11"></div>
+      <div id="celda04-12"></div>
+    </div>
+    <div id="fila05">
+      <div id="celda05-01"></div>
+      <div id="celda05-02"></div>
+      <div id="celda05-03"></div>
+      <div id="celda05-04"></div>
+      <div id="celda05-05"></div>
+      <div id="celda05-06"></div>
+      <div id="celda05-07"></div>
+      <div id="celda05-08"></div>
+      <div id="celda05-09"></div>
+      <div id="celda05-10"></div>
+      <div id="celda05-11"></div>
+      <div id="celda05-12"></div>
+    </div>
+    <div id="fila06">
+      <div id="celda06-01"></div>
+      <div id="celda06-02"></div>
+      <div id="celda06-03"></div>
+      <div id="celda06-04"></div>
+      <div id="celda06-05"></div>
+      <div id="celda06-06"></div>
+      <div id="celda06-07"></div>
+      <div id="celda06-08"></div>
+      <div id="celda06-09"></div>
+      <div id="celda06-10"></div>
+      <div id="celda06-11"></div>
+      <div id="celda06-12"></div>
+    </div>
+    <div id="fila07">
+      <div id="celda07-01"></div>
+      <div id="celda07-02"></div>
+      <div id="celda07-03"></div>
+      <div id="celda07-04"></div>
+      <div id="celda07-05"></div>
+      <div id="celda07-06"></div>
+      <div id="celda07-07"></div>
+      <div id="celda07-08"></div>
+      <div id="celda07-09"></div>
+      <div id="celda07-10"></div>
+      <div id="celda07-11"></div>
+      <div id="celda07-12"></div>
+    </div>
+    <div id="fila08">
+      <div id="celda08-01"></div>
+      <div id="celda08-02"></div>
+      <div id="celda08-03"></div>
+      <div id="celda08-04"></div>
+      <div id="celda08-05"></div>
+      <div id="celda08-06"></div>
+      <div id="celda08-07"></div>
+      <div id="celda08-08"></div>
+      <div id="celda08-09"></div>
+      <div id="celda08-10"></div>
+      <div id="celda08-11"></div>
+      <div id="celda08-12"></div>
+    </div>
+    <div id="fila09">
+      <div id="celda09-01"></div>
+      <div id="celda09-02"></div>
+      <div id="celda09-03"></div>
+      <div id="celda09-04"></div>
+      <div id="celda09-05"></div>
+      <div id="celda09-06"></div>
+      <div id="celda09-07"></div>
+      <div id="celda09-08"></div>
+      <div id="celda09-09"></div>
+      <div id="celda09-10"></div>
+      <div id="celda09-11"></div>
+      <div id="celda09-12"></div>
+    </div>
+    <div id="fila10">
+      <div id="celda10-01"></div>
+      <div id="celda10-02"></div>
+      <div id="celda10-03"></div>
+      <div id="celda10-04"></div>
+      <div id="celda10-05"></div>
+      <div id="celda10-06"></div>
+      <div id="celda10-07"></div>
+      <div id="celda10-08"></div>
+      <div id="celda10-09"></div>
+      <div id="celda10-10"></div>
+      <div id="celda10-11"></div>
+      <div id="celda10-12"></div>
+    </div>
+    <div id="fila11">
+      <div id="celda11-01"></div>
+      <div id="celda11-02"></div>
+      <div id="celda11-03"></div>
+      <div id="celda11-04"></div>
+      <div id="celda11-05"></div>
+      <div id="celda11-06"></div>
+      <div id="celda11-07"></div>
+      <div id="celda11-08"></div>
+      <div id="celda11-09"></div>
+      <div id="celda11-10"></div>
+      <div id="celda11-11"></div>
+      <div id="celda11-12"></div>
+    </div>
+    <div id="fila12">
+      <div id="celda12-01"></div>
+      <div id="celda12-02"></div>
+      <div id="celda12-03"></div>
+      <div id="celda12-04"></div>
+      <div id="celda12-05"></div>
+      <div id="celda12-06"></div>
+      <div id="celda12-07"></div>
+      <div id="celda12-08"></div>
+      <div id="celda12-09"></div>
+      <div id="celda12-10"></div>
+      <div id="celda12-11"></div>
+      <div id="celda12-12"></div>
+    </div>
+    </div>
+    <div id="coche2">
+      <div id="die2" class="dice">2</div>
+      <button onclick="rollDice2()">Tira el Dado 2</button>
+      <h2 id="status2" style="clear: left"></h2>
+      <h2 id="tiro2" style="clear: left"></h2>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/randomrace.js"></script>
+</body>
+
 </html>

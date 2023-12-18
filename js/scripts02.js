@@ -5,8 +5,9 @@ var y1=0;
 var x2=1;
 var y2=0;
 var TCOLUMNAS=13
-var TRENGLONES = 10;
-var TANCHO_CUADRO=42; //ANCHO CELDA
+var TRENGLONES = 11;
+var TANCHO_CUADRO=37; //ANCHO CELDA
+var TALTO_CUADRO=37; //ANCHO CELDA
 var TMATRIZ_RENGLON = 20;
 var TMATRIZ_COLUMNA = 320;
 
@@ -87,6 +88,14 @@ class Celda {
 		this.dibuja = dibujaCelda;
 		this.circuito1 = marcaCelda1;
 		this.circuito2 = marcaCelda2;
+		this.addEventListener("focus", function () {
+			console.log("Estas dentro de la celda - focus");
+			//			celda.marcaCelda1()
+		});
+		this.addEventListener("mousedown", function () {
+			console.log("Estas dentro de la celda - mousedown");
+				//			celda.marcaCelda1()
+		});
 	}
 }
 function dibujaCelda(){
@@ -116,8 +125,36 @@ function marcaCelda2(){
 	ctx.restore();
 }
 
+function findxy(res, e) {
+	if (res == 'down') {
+		prevX = currX;
+		prevY = currY;
+		currX = e.clientX - canvas.offsetLeft;
+		currY = e.clientY - canvas.offsetTop;
 
-
+		flag = true;
+		dot_flag = true;
+		if (dot_flag) {
+			ctx.beginPath();
+			ctx.fillStyle = x;
+			ctx.fillRect(currX, currY, 2, 2);
+			ctx.closePath();
+			dot_flag = false;
+		}
+	}
+	if (res == 'up' || res == "out") {
+		flag = false;
+	}
+	if (res == 'move') {
+		if (flag) {
+			prevX = currX;
+			prevY = currY;
+			currX = e.clientX - canvas.offsetLeft;
+			currY = e.clientY - canvas.offsetTop;
+			draw();
+		}
+	}
+}
 
 /***********
 INICIO
@@ -130,6 +167,7 @@ window.onload = function(){
 			tablerocircuito();
 			console.log("Se ha pintado el playground!!!")
 			console.log("Hay que dibujar el circuito!!!")
+
 		} else {
 			alert("Error al crear tu contexto");
 		}

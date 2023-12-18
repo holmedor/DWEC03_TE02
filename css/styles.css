@@ -1,5 +1,6 @@
 body{
     margin: 0 auto;
+	padding:0;
     width: 800px;
 	height: 700px;
 }
@@ -75,3 +76,187 @@ div.dice{
 	justify-content: space-around;
 }
 
+#tablero {
+	margin: auto;
+    grid-template-columns: repeat(13,1fr);
+    display: grid;
+	justify-content: space-between;
+    grid-template-areas:  	"celda01-01 celda01-02 celda01-03 celda01-04 celda01-05 celda01-06 celda01-07 celda01-08 celda01-09 celda01-10 celda01-11 celda01-12 "
+							"celda02-01 celda02-02 celda02-03 celda02-04 celda02-05 celda02-06 celda02-07 celda02-08 celda02-09 celda02-10 celda02-11 celda02-12 "
+							"celda03-01 celda03-02 celda03-03 celda03-04 celda03-05 celda03-06 celda03-07 celda03-08 celda03-09 celda03-10 celda03-11 celda03-12 "
+							"celda04-01 celda04-02 celda04-03 celda04-04 celda04-05 celda04-06 celda04-07 celda04-08 celda04-09 celda04-10 celda04-11 celda04-12 "
+							"celda05-01 celda05-02 celda05-03 celda05-04 celda05-05 celda05-06 celda05-07 celda05-08 celda05-09 celda05-10 celda05-11 celda05-12 "
+							"celda06-01 celda06-02 celda06-03 celda06-04 celda06-05 celda06-06 celda06-07 celda06-08 celda06-09 celda06-10 celda06-11 celda06-12 "
+							"celda07-01 celda07-02 celda07-03 celda07-04 celda07-05 celda07-06 celda07-07 celda07-08 celda07-09 celda07-10 celda07-11 celda07-12 "
+							"celda08-01 celda08-02 celda08-03 celda08-04 celda08-05 celda08-06 celda08-07 celda08-08 celda08-09 celda08-10 celda08-11 celda08-12 "
+							"celda09-01 celda09-02 celda09-03 celda09-04 celda09-05 celda09-06 celda09-07 celda09-08 celda09-09 celda09-10 celda09-11 celda09-12 "
+							"celda10-01 celda10-02 celda10-03 celda10-04 celda10-05 celda10-06 celda10-07 celda10-08 celda10-09 celda10-10 celda10-11 celda10-12 "	
+							"celda11-01 celda11-02 celda11-03 celda11-04 celda11-05 celda11-06 celda11-07 celda11-08 celda11-09 celda11-10 celda11-11 celda11-12 "	
+							"celda12-01 celda12-02 celda12-03 celda12-04 celda12-05 celda12-06 celda12-07 celda12-08 celda12-09 celda12-10 celda12-11 celda12-11 ";
+ 	column-gap: 0px;
+    row-gap: 0px;
+}
+  	
+#celda01-01{ height:35px; width:35px; grid-area: celda01-01;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-02{ height:35px; width:35px; grid-area: celda01-02;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-03{ height:35px; width:35px; grid-area: celda01-03;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-04{ height:35px; width:35px; grid-area: celda01-04;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-05{ height:35px; width:35px; grid-area: celda01-05;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-06{ height:35px; width:35px; grid-area: celda01-06;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-07{ height:35px; width:35px; grid-area: celda01-07;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-08{ height:35px; width:35px; grid-area: celda01-08;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-09{ height:35px; width:35px; grid-area: celda01-09;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-10{ height:35px; width:35px; grid-area: celda01-10;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-11{ height:35px; width:35px; grid-area: celda01-11;	border:dotted 2px black; background:whitesmoke;	}
+#celda01-12{ height:35px; width:35px; grid-area: celda01-12;	border:dotted 2px black; background:whitesmoke;	}
+
+#celda02-01{ height:35px; width:35px; grid-area: celda02-01;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-02{ height:35px; width:35px; grid-area: celda02-02;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-03{ height:35px; width:35px; grid-area: celda02-03;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-04{ height:35px; width:35px; grid-area: celda02-04;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-05{ height:35px; width:35px; grid-area: celda02-05;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-06{ height:35px; width:35px; grid-area: celda02-06;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-07{ height:35px; width:35px; grid-area: celda02-07;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-08{ height:35px; width:35px; grid-area: celda02-08;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-09{ height:35px; width:35px; grid-area: celda02-09;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-10{ height:35px; width:35px; grid-area: celda02-10;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-11{ height:35px; width:35px; grid-area: celda02-11;	border:dotted 2px black; background:whitesmoke;	}
+#celda02-12{ height:35px; width:35px; grid-area: celda02-12;	border:dotted 2px black; background:whitesmoke;	}
+
+#celda03-01{ height:35px; width:35px; grid-area: celda03-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-02{ height:35px; width:35px; grid-area: celda03-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-03{ height:35px; width:35px; grid-area: celda03-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-04{ height:35px; width:35px; grid-area: celda03-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-05{ height:35px; width:35px; grid-area: celda03-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-06{ height:35px; width:35px; grid-area: celda03-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-07{ height:35px; width:35px; grid-area: celda03-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-08{ height:35px; width:35px; grid-area: celda03-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-09{ height:35px; width:35px; grid-area: celda03-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-10{ height:35px; width:35px; grid-area: celda03-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-11{ height:35px; width:35px; grid-area: celda03-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda03-12{ height:35px; width:35px; grid-area: celda03-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda04-01{ height:35px; width:35px; grid-area: celda04-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-02{ height:35px; width:35px; grid-area: celda04-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-03{ height:35px; width:35px; grid-area: celda04-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-04{ height:35px; width:35px; grid-area: celda04-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-05{ height:35px; width:35px; grid-area: celda04-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-06{ height:35px; width:35px; grid-area: celda04-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-07{ height:35px; width:35px; grid-area: celda04-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-08{ height:35px; width:35px; grid-area: celda04-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-09{ height:35px; width:35px; grid-area: celda04-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-10{ height:35px; width:35px; grid-area: celda04-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-11{ height:35px; width:35px; grid-area: celda04-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda04-12{ height:35px; width:35px; grid-area: celda04-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda05-01{ height:35px; width:35px; grid-area: celda05-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-02{ height:35px; width:35px; grid-area: celda05-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-03{ height:35px; width:35px; grid-area: celda05-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-04{ height:35px; width:35px; grid-area: celda05-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-05{ height:35px; width:35px; grid-area: celda05-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-06{ height:35px; width:35px; grid-area: celda05-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-07{ height:35px; width:35px; grid-area: celda05-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-08{ height:35px; width:35px; grid-area: celda05-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-09{ height:35px; width:35px; grid-area: celda05-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-10{ height:35px; width:35px; grid-area: celda05-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-11{ height:35px; width:35px; grid-area: celda05-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda05-12{ height:35px; width:35px; grid-area: celda05-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda06-01{ height:35px; width:35px; grid-area: celda06-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-02{ height:35px; width:35px; grid-area: celda06-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-03{ height:35px; width:35px; grid-area: celda06-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-04{ height:35px; width:35px; grid-area: celda06-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-05{ height:35px; width:35px; grid-area: celda06-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-06{ height:35px; width:35px; grid-area: celda06-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-07{ height:35px; width:35px; grid-area: celda06-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-08{ height:35px; width:35px; grid-area: celda06-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-09{ height:35px; width:35px; grid-area: celda06-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-10{ height:35px; width:35px; grid-area: celda06-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-11{ height:35px; width:35px; grid-area: celda06-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda06-12{ height:35px; width:35px; grid-area: celda06-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda07-01{ height:35px; width:35px; grid-area: celda07-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-02{ height:35px; width:35px; grid-area: celda07-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-03{ height:35px; width:35px; grid-area: celda07-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-04{ height:35px; width:35px; grid-area: celda07-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-05{ height:35px; width:35px; grid-area: celda07-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-06{ height:35px; width:35px; grid-area: celda07-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-07{ height:35px; width:35px; grid-area: celda07-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-08{ height:35px; width:35px; grid-area: celda07-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-09{ height:35px; width:35px; grid-area: celda07-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-10{ height:35px; width:35px; grid-area: celda07-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-11{ height:35px; width:35px; grid-area: celda07-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda07-12{ height:35px; width:35px; grid-area: celda07-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda08-01{ height:35px; width:35px; grid-area: celda08-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-02{ height:35px; width:35px; grid-area: celda08-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-03{ height:35px; width:35px; grid-area: celda08-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-04{ height:35px; width:35px; grid-area: celda08-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-05{ height:35px; width:35px; grid-area: celda08-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-06{ height:35px; width:35px; grid-area: celda08-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-07{ height:35px; width:35px; grid-area: celda08-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-08{ height:35px; width:35px; grid-area: celda08-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-09{ height:35px; width:35px; grid-area: celda08-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-10{ height:35px; width:35px; grid-area: celda08-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-11{ height:35px; width:35px; grid-area: celda08-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda08-12{ height:35px; width:35px; grid-area: celda08-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda09-01{ height:35px; width:35px; grid-area: celda09-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-02{ height:35px; width:35px; grid-area: celda09-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-03{ height:35px; width:35px; grid-area: celda09-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-04{ height:35px; width:35px; grid-area: celda09-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-05{ height:35px; width:35px; grid-area: celda09-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-06{ height:35px; width:35px; grid-area: celda09-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-07{ height:35px; width:35px; grid-area: celda09-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-08{ height:35px; width:35px; grid-area: celda09-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-09{ height:35px; width:35px; grid-area: celda09-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-10{ height:35px; width:35px; grid-area: celda09-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-11{ height:35px; width:35px; grid-area: celda09-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda09-12{ height:35px; width:35px; grid-area: celda09-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda10-01{ height:35px; width:35px; grid-area: celda10-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-02{ height:35px; width:35px; grid-area: celda10-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-03{ height:35px; width:35px; grid-area: celda10-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-04{ height:35px; width:35px; grid-area: celda10-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-05{ height:35px; width:35px; grid-area: celda10-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-06{ height:35px; width:35px; grid-area: celda10-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-07{ height:35px; width:35px; grid-area: celda10-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-08{ height:35px; width:35px; grid-area: celda10-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-09{ height:35px; width:35px; grid-area: celda10-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-10{ height:35px; width:35px; grid-area: celda10-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-11{ height:35px; width:35px; grid-area: celda10-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda10-12{ height:35px; width:35px; grid-area: celda10-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda11-01{ height:35px; width:35px; grid-area: celda10-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-02{ height:35px; width:35px; grid-area: celda10-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-03{ height:35px; width:35px; grid-area: celda10-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-04{ height:35px; width:35px; grid-area: celda10-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-05{ height:35px; width:35px; grid-area: celda10-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-06{ height:35px; width:35px; grid-area: celda10-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-07{ height:35px; width:35px; grid-area: celda10-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-08{ height:35px; width:35px; grid-area: celda10-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-09{ height:35px; width:35px; grid-area: celda10-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-10{ height:35px; width:35px; grid-area: celda10-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-11{ height:35px; width:35px; grid-area: celda10-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda11-12{ height:35px; width:35px; grid-area: celda10-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#celda12-01{ height:35px; width:35px; grid-area: celda10-01; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-02{ height:35px; width:35px; grid-area: celda10-02; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-03{ height:35px; width:35px; grid-area: celda10-03; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-04{ height:35px; width:35px; grid-area: celda10-04; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-05{ height:35px; width:35px; grid-area: celda10-05; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-06{ height:35px; width:35px; grid-area: celda10-06; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-07{ height:35px; width:35px; grid-area: celda10-07; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-08{ height:35px; width:35px; grid-area: celda10-08; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-09{ height:35px; width:35px; grid-area: celda10-09; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-10{ height:35px; width:35px; grid-area: celda10-10; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-11{ height:35px; width:35px; grid-area: celda10-11; 	border:dotted 2px black; background:whitesmoke;	}
+#celda12-12{ height:35px; width:35px; grid-area: celda10-12; 	border:dotted 2px black; background:whitesmoke;	}
+
+#tablero table, th, td {
+	border: 1px solid;
+	background:red;
+	width: 35px;
+	height: 35px;
+
+  }
