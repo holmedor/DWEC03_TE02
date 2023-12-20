@@ -13,11 +13,11 @@ const contenedorEscribirJugadores = document.getElementById("chat");
 var numJugadores = 0; //contador de jugadores en JSON
 var arrayJugadores = new Array(); //array de jugadores
 
-var nombre = "";
-var password = "";
+var nombre = "";           //nombre del usuario
+var password = "";         //password del usuario 
 var id = "";
 var passwordOK = false;
-var url = "randomrace.html";
+var url = "randomrace.html";//url
 
 // -------------------- CLASE JUGADOR -------------------------------
 class Jugador {
@@ -48,11 +48,9 @@ class Jugador {
   getContraseñaJugador() {
     return this.contraseña;
   }
-
 }
-
 /*
-  funcion para leer del JSON
+  función para leer del JSON
 */
 function cargarJugadoresJSON() {
   let path = "data/usuarios.json";
@@ -71,9 +69,8 @@ function cargarJugadoresJSON() {
     });
   });
 }
-
 /* 
-	metodo para añadir jugadores al array cuando arranca la pagina web
+	función para añadir jugadores al array cuando arranca la pagina web
 */
 function aniadirJugadoresInicialesArray(data) {
   //  cargar el fichero JSON, parsearlo a objetos tipo "jugador" y añadirlos al array
@@ -94,7 +91,9 @@ function aniadirJugadoresInicialesArray(data) {
   }
   console.log("arrayJugadores: ", arrayJugadores);
 }
-
+/* 
+	función que al pulsar "ENTRAR" recoge usuario y password y comprueba
+*/
 function inicio() {
   capturarDatosJugador();
   passwordOK = false;
@@ -115,7 +114,9 @@ function inicio() {
     }
   }
 }
-
+/* 
+	función que recoge usuario 
+*/
 function capturarDatosJugador() {
   // TODO: recoger los el nombre y password del HTML
   nombre = document.getElementById("fnombre").value;
@@ -123,7 +124,9 @@ function capturarDatosJugador() {
   console.log("Nombre:" + nombre);
   console.log("Password:" + password);
 }
-
+/* 
+	función que comprueba usuario y password 
+*/
 function comprobarPassword(password) {
   let error = -1;
   for (let i = password.length; i >= 0; i--) {
@@ -157,7 +160,9 @@ function comprobarPassword(password) {
     passwordOK = true;
   }
 }
-
+/* 
+	función que busca usuario y password 
+*/
 function buscarJugador(nombre, password) {
   let encontrado = false;
   arrayJugadores.forEach(function (jugador) {
@@ -167,12 +172,15 @@ function buscarJugador(nombre, password) {
   });
   return encontrado;
 }
-
+/* 
+	función que tras comprobar usuario y password deja acceder al juego
+*/
 function redirigir(url) {
   window.location.href = url;
 }
+//
 // ------------------- MAIN ------------------------
-// cargamos los jugadores cuando empieza el programa
+// cargamos los jugadores cuando empieza el programa y espera a que un usuario acceda
 cargarJugadoresJSON(); //carga el fichero JSON
 console.log("Jugadores cargados!!!");
 console.log(arrayJugadores);
